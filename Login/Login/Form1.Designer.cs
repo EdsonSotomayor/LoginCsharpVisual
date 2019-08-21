@@ -31,9 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gral));
             this.label1 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.User = new System.Windows.Forms.TextBox();
             this.pasw = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Pasword = new System.Windows.Forms.TextBox();
+            this.buttoniN = new System.Windows.Forms.Button();
+            this.buttonS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,14 +62,15 @@
             this.username.TabIndex = 1;
             this.username.Text = "NOMBRE DE USUARIO: ";
             // 
-            // textBox1
+            // User
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(36, 170);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 26);
-            this.textBox1.TabIndex = 2;
+            this.User.BackColor = System.Drawing.Color.White;
+            this.User.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.User.Location = new System.Drawing.Point(36, 170);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(177, 23);
+            this.User.TabIndex = 2;
+            this.User.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // pasw
             // 
@@ -79,12 +82,37 @@
             this.pasw.TabIndex = 3;
             this.pasw.Text = "CONTRASEÑA: ";
             // 
-            // textBox2
+            // Pasword
             // 
-            this.textBox2.Location = new System.Drawing.Point(40, 267);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(172, 20);
-            this.textBox2.TabIndex = 4;
+            this.Pasword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Pasword.Location = new System.Drawing.Point(36, 264);
+            this.Pasword.Name = "Pasword";
+            this.Pasword.PasswordChar = '*';
+            this.Pasword.Size = new System.Drawing.Size(177, 26);
+            this.Pasword.TabIndex = 4;
+            // 
+            // buttoniN
+            // 
+            this.buttoniN.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttoniN.Location = new System.Drawing.Point(273, 407);
+            this.buttoniN.Name = "buttoniN";
+            this.buttoniN.Size = new System.Drawing.Size(141, 51);
+            this.buttoniN.TabIndex = 5;
+            this.buttoniN.Text = "INICIA SESION";
+            this.buttoniN.UseVisualStyleBackColor = false;
+            this.buttoniN.Click += new System.EventHandler(this.ButtoniN_Click);
+            // 
+            // buttonS
+            // 
+            this.buttonS.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonS.Location = new System.Drawing.Point(565, 407);
+            this.buttonS.Name = "buttonS";
+            this.buttonS.Size = new System.Drawing.Size(141, 51);
+            this.buttonS.TabIndex = 6;
+            this.buttonS.Text = "SALIR";
+            this.buttonS.UseVisualStyleBackColor = false;
+            this.buttonS.Click += new System.EventHandler(this.ButtonS_Click);
             // 
             // Gral
             // 
@@ -94,9 +122,11 @@
             this.BackColor = System.Drawing.Color.Firebrick;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(978, 494);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.buttonS);
+            this.Controls.Add(this.buttoniN);
+            this.Controls.Add(this.Pasword);
             this.Controls.Add(this.pasw);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.User);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.SizeNESW;
@@ -113,9 +143,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label username;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox User;
         private System.Windows.Forms.Label pasw;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Pasword;
+        private System.Windows.Forms.Button buttoniN;
+        private System.Windows.Forms.Button buttonS;
     }
 }
 

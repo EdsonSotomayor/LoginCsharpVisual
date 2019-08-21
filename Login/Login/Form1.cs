@@ -21,5 +21,32 @@ namespace Login
         {
 
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ButtoniN_Click(object sender, EventArgs e)
+        {
+            string name = User.Text;
+            string pasw = Pasword.Text;
+            if (name == "Juancho")
+            {
+                if (pasw == "123tamarindo")
+                {
+                    MessageBox.Show("Bienvenido " + name);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nombre de usuario y contraseña incorrecta x.x");
+            }
+        }
+
+        private void ButtonS_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
